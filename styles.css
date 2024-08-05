@@ -17,6 +17,11 @@ header {
     text-align: center;
 }
 
+header a {
+    color: white;
+    text-decoration: none;
+}
+
 .upload-btn {
     background-color: white;
     color: #4CAF50;
