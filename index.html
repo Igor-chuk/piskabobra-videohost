@@ -9,18 +9,24 @@
 <body>
     <header>
         <h1>My Video Hosting</h1>
+        <a href="upload.html" class="upload-btn">Upload Video</a>
     </header>
     <main>
-        <div class="video-container">
-            <video id="myVideo" width="640" height="360" controls>
-                <source src="sample-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="video-controls">
-                <button id="playPauseBtn">Play/Pause</button>
-                <button id="muteBtn">Mute/Unmute</button>
-                <button id="fullscreenBtn">Fullscreen</button>
+        <div class="video-grid">
+            <!-- Пример видео -->
+            <div class="video-item">
+                <a href="video.html?video=video1.mp4">
+                    <img src="thumbnails/video1.jpg" alt="Video 1">
+                    <h3>Video Title 1</h3>
+                </a>
             </div>
+            <div class="video-item">
+                <a href="video.html?video=video2.mp4">
+                    <img src="thumbnails/video2.jpg" alt="Video 2">
+                    <h3>Video Title 2</h3>
+                </a>
+            </div>
+            <!-- Добавьте больше видео здесь -->
         </div>
     </main>
     <script src="scripts.js"></script>
