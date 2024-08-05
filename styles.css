@@ -1,94 +1,46 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    margin: 0;
-    padding: 0;
+body{
+    background-color: rgb(65, 65, 65);
+}
+.parent {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(118, 118, 158);
+    background-color: rgb(85, 85, 112);
+    border-radius: 15px;
 }
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
+.rounded{
+    border: 2px solid #353232;
+    border-radius: 10px;
 }
-
-header a {
-    color: white;
-    text-decoration: none;
+.vid-bg{
+    background-color: rgb(77, 77, 77);
+    border-radius: 7px;
+    width: 260px;
 }
-
-.upload-btn {
-    background-color: white;
-    color: #4CAF50;
-    border: 2px solid #4CAF50;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.upload-btn:hover {
-    background-color: #45a049;
-    color: white;
-}
-
-main {
-    margin: 20px;
-    width: 80%;
-}
-
-.video-grid {
+.grid{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, 260px);
+    grid-column-gap: 5px;
 }
-
-.video-item {
+.upload{
+    background-color: #353232;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    width:500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin: 0 auto;
+    margin: 50px auto;
+}
+.videolbl, .iconlbl, .videotitlelbl{
+    color: #d8a8a8;
 }
 
-.video-item img {
-    width: 100%;
-    border-radius: 5px;
+.submitbtn{
+    background: #8d7171;
 }
 
-.video-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.video-controls {
-    margin-top: 10px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label, form input, form button {
-    margin: 10px 0;
+a, u {
+    text-decoration: none;
+    color: aquamarine;
 }
