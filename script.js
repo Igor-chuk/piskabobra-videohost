@@ -56,7 +56,39 @@ document.addEventListener("DOMContentLoaded", function() {
     if (uploadForm) {
         uploadForm.addEventListener('submit', function(event) {
             event.preventDefault();
+            // Здесь должна быть обработка загрузки видео на сервер
             alert('Видео загружено (в этой демо-версии функция не реализована).');
+            window.location.href = '/piskabobra-videohost';
+        });
+    }
+
+    // Загрузка списка видео на главной странице
+    if (window.location.pathname.endsWith("/piskabobra-videohost") || window.location.pathname.endsWith("/piskabobra-videohost/")) {
+        var videoGrid = document.getElementById("videoGrid");
+        var videos = [
+            {title: "Video Title 1", file: "video1.mp4", thumbnail: "thumbnails/video1.jpg"},
+            {title: "Video Title 2", file: "video2.mp4", thumbnail: "thumbnails/video2.jpg"}
+            // Добавьте больше видео здесь
+        ];
+
+        videos.forEach(function(video) {
+            var videoItem = document.createElement("div");
+            videoItem.classList.add("video-item");
+
+            var videoLink = document.createElement("a");
+            videoLink.href = "video.html?video=" + video.file;
+
+            var videoThumbnail = document.createElement("img");
+            videoThumbnail.src = video.thumbnail;
+            videoThumbnail.alt = video.title;
+
+            var videoTitle = document.createElement("h3");
+            videoTitle.textContent = video.title;
+
+            videoLink.appendChild(videoThumbnail);
+            videoLink.appendChild(videoTitle);
+            videoItem.appendChild(videoLink);
+            videoGrid.appendChild(videoItem);
         });
     }
 });
