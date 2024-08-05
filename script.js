@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Функция для загрузки списка видео из videos.json
     function loadVideos() {
         fetch('videos.json')
             .then(response => response.json())
@@ -28,12 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
             });
     }
 
-    // Загрузка списка видео на главной странице
-    if (window.location.pathname.endsWith("/piskabobra-videohost") || window.location.pathname.endsWith("/piskabobra-videohost/")) {
+    if (window.location.pathname.endsWith("/piskabobra-videohost/") || window.location.pathname.endsWith("/piskabobra-videohost")) {
         loadVideos();
     }
 
-    // Если мы на странице video.html, загружаем видео из URL
     if (window.location.pathname.endsWith("video.html")) {
         var urlParams = new URLSearchParams(window.location.search);
         var videoFile = urlParams.get('video');
@@ -44,7 +41,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Обработка формы загрузки видео
     var uploadForm = document.getElementById('uploadForm');
     if (uploadForm) {
         uploadForm.addEventListener('submit', function(event) {
@@ -60,7 +56,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 thumbnail: thumbnailFile.name
             };
 
-            // Загрузка видео и миниатюры в локальное хранилище
             var reader = new FileReader();
             reader.onload = function() {
                 localStorage.setItem(videoFile.name, reader.result);
@@ -68,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 thumbReader.onload = function() {
                     localStorage.setItem(thumbnailFile.name, thumbReader.result);
 
-                    // Сохраняем данные о видео в JSON-файл (имитация базы данных)
                     fetch('videos.json')
                         .then(response => response.json())
                         .then(videoList => {
