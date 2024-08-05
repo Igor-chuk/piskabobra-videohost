@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Hosting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>My Video Hosting</h1>
+    </header>
+    <main>
+        <div class="video-container">
+            <video id="myVideo" width="640" height="360" controls>
+                <source src="sample-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-controls">
+                <button id="playPauseBtn">Play/Pause</button>
+                <button id="muteBtn">Mute/Unmute</button>
+                <button id="fullscreenBtn">Fullscreen</button>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
