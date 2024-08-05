@@ -1,26 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Video</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1><a href="/piskabobra-videohost">My Video Hosting</a></h1>
-    </header>
-    <main>
-        <form id="uploadForm" action="upload.html" method="POST" enctype="multipart/form-data">
-            <label for="videoFile">Select video file:</label>
-            <input type="file" id="videoFile" name="videoFile" accept="video/*" required>
-            <label for="thumbnailFile">Select thumbnail image:</label>
-            <input type="file" id="thumbnailFile" name="thumbnailFile" accept="image/*" required>
-            <label for="videoTitle">Video Title:</label>
-            <input type="text" id="videoTitle" name="videoTitle" required>
-            <button type="submit">Upload</button>
+<html>
+    <head>
+        <title>piskabobra-videohost - Опубликовать</title>
+        <link rel="stylesheet" href="styles.css">
+        <div class="parent">
+            <h1 ><a href="/my-simple-site/index.html">PISKABOBRA-VIDEOHOST</a></h1>
+        </div>
+    </head>
+    <body>
+        <form action="upload.php" method="post" enctype="multipart/form-data" id="uploadvid" class="upload">
+            <label class="videolbl">
+                Видео
+                <input type="file" id="video" name="video" accept="video/*">
+            </label>
+            <label class="iconlbl">
+                Изображение
+                <input type="file" id="icon" name="icon" accept="image/*">
+            </label>
+            <label class="videotitlelbl">
+                Название
+                <input type="text" id="videotitle" name="videotitle">
+            </label>
+            <input type="submit" class="submitbtn" name="submit" value="Отправить">
         </form>
-    </main>
-    <script src="scripts.js"></script>
-</body>
+    </body>
 </html>
