@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $target_dir = "my-simple-site/videos/";
+    $target_dir = "videos/";
     
     // Создаем папку, если ее нет
     if (!is_dir($target_dir)) {
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     
     // Перенаправление на главную страницу
-    header("Location: /my-simple-site/index.html");
+    header("Location: /piskabobra-videohost/index.html");
     exit();
 } else {
     echo "Неверный метод запроса.";
